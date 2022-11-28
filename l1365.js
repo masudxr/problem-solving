@@ -1,4 +1,4 @@
-// How Many Numbers Are Smaller Than the Current Number
+// How Many Numbers Are Smaller Than the Current Number //
 
 var smallerNumbersThanCurrent = function(nums) {
     let a = [];
@@ -7,7 +7,6 @@ var smallerNumbersThanCurrent = function(nums) {
     for(let j=0; j<nums.length; j++){
         if (nums[i]>nums[j]){
             b.push(nums[j])
-        // console.log(nums[i]);
         }
     }
     a.push(b.length);
