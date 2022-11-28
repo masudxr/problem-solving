@@ -16,7 +16,7 @@ var smallerNumbersThanCurrent = function(nums) {
 };
 
 let nums = [6,5,4,8]
-let mon = smallerNumbersThanCurrent(nums);
-console.log(mon)
+let k = smallerNumbersThanCurrent(nums);
+console.log(k)
 
 
