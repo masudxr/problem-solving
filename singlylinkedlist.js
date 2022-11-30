@@ -21,15 +21,15 @@ class LinkedList {
             this.lastNode.next = node;
             // console.log('this.lastNode.next: ', this.lastNode)
         }
-        this.lastNode = node; 
+        this.lastNode = node;
         // console.log('this.Node.next: ', this.lastNode);
     }
-    print(){
+    print() {
         let node = this.head;
         // let nodelist;
         // console.log('Nodelist5: ', node.val);
 
-        while(node){
+        while (node) {
             // nodelist = node.val;
             console.log('Nodelist55: ', node.val);
             //node.val ++;
