@@ -1,26 +1,63 @@
 // Merge Two Sorted Lists
 
-
-var mergeTwoLists = function(list1, list2) {
-    for (let i=0; i<list2.length; i++){
-        list1.push(list2[i]);
+class ListNode {
+    constructor(value, next = null) {
+        this.val = value;
+        this.next = next;
     }
-    let mid =0;
-    let merge =[];
-    for (let i=0; i<list1.length; i++){
-        for (let j=i+1; j<list1.length; j++){
-            if(list1[i] >= list1[j]){
-                mid = list1[i];
-                list1[i] = list1[j];
-                list1[j] = mid;
-            }
+}
+var mergeTwoLists = function (list1, list2) {
+
+    let head = null;
+    let temp = head;
+
+
+    if (list1.val < list2.val) {
+       temp = head = new ListNode(list1.val);
+        list1 = list1.next;
+        // console.log('list1.val:', list1);
+    } else {
+        temp = head = new ListNode(list2.val);
+        list2 = list2.next;
+        // console.log('list2.val:', list2);
+
+    }
+    // console.log('Head first one:', head);
+    // console.log('list2.val:', list2);
+
+
+    while (list1.next != null  || list2.next !=null) {
+
+        if (list1.val < list2.val) {
+            console.log('list1.val if condition:', list1);
+            console.log('Head next inside if condition:', temp.next);
+
+            temp.next = new ListNode(list1.val);
+            console.log('Head next inside if condition2:', temp.next);
+            console.log('Head inside if condition2222:', temp);
+            list1 = list1.next;
+            temp = temp.next;
+
+        } else {
+            console.log('list2.val else condition:', list2);
+            console.log('Head next inside else condition:', temp.next);
+            temp.next = new ListNode(list2.val);
+            console.log('Head next inside else condition2:', temp.next);
+            console.log('Head inside else condition2222:', temp);
+            list2 = list2.next;
+            temp = temp.next;
+            // console.log('Head inside else condition:', head);
         }
     }
 
-return list1;
-};
-let list1 = [1, 2, 4, 7];
-let list2 = [1, 3, 6, 9];
+    console.log('Head final one:', head);
 
-let xx = mergeTwoLists(list1, list2);
-console.log(xx);
+    return head;
+
+};
+
+let list1 = new ListNode(1, new ListNode(3, new ListNode(5)));
+let list2 = new ListNode(2, new ListNode(4, new ListNode(8)));
+
+let merge = mergeTwoLists(list1, list2);
+console.log('return value: ', merge);

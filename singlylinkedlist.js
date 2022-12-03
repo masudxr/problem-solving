@@ -23,7 +23,8 @@ class LinkedList {
             // console.log('this.lastNode.next: ', this.lastNode)
         }
         // this.lastNode = node;
-        
+
+        // Find out the 
         if (node) {
             this.length = this.length + 1;
             this.lastNode = node;
