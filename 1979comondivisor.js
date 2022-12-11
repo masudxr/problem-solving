@@ -12,15 +12,12 @@ var findGCD = function(nums) {
         }
     }
     for(let i=1; i<=nums[nums.length-1]; i++){
-        console.log('nums:', nums[nums.length-1]);
-
         if(nums[0]%i == 0 && nums[nums.length-1]%i == 0){
             mid =i;
-            console.log(i);
         }
     }
     return mid;    
 };
-let nums = [3, 3];
+let nums = [30, 5, 70, 22, 100];
 let xx = findGCD(nums);
 console.log(xx);
