@@ -4,8 +4,6 @@ var numberOfSteps = function(num) {
     if (num%2==0){
         count +=1;
         num  = num/2;
-        // console.log(' 1 ', x);
-        // console.log(count);
     }
     else{
         count +=1;

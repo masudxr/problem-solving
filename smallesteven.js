@@ -5,5 +5,5 @@ var smallestEvenMultiple = function(n) {
     }
 }
 };
-let x = smallestEvenMultiple(150);
+let x = smallestEvenMultiple(77);
 console.log(x);
