@@ -27,12 +27,10 @@ while (n) {
     sum1 += n % 10;
 
     n = Math.floor(n / 10);
-
 }
 let result = sum - sum1;
 return result;
 };
-
 let x = subtractProductAndSum(4421);
 console.log(x);
 
