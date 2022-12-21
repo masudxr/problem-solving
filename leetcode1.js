@@ -1,23 +1,24 @@
-
-var twoSum = function(nums, target) {
-  let Arr =[];
-for (let i =0; i<nums.length; i++){
-  for(let j=i+1; j<nums.length; j++){
-  if(nums[i]+nums[j] == target){
-      Arr.push(i);
-      Arr.push(j);
-
+/* eslint-disable no-console */
+/* eslint-disable func-names */
+/* eslint-disable no-plusplus */
+/* eslint-disable eqeqeq */
+const twoSum = function (nums, target) {
+  const Arr = [];
+  for (let i = 0; i < nums.length; i++) {
+    // eslint-disable-next-line no-plusplus
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] == target) {
+        Arr.push(i);
+        Arr.push(j);
+      }
+    }
   }
-}
-} 
-return Arr; 
+  return Arr;
 };
-let nums = [2,7,11,15];
-let target = 9;
-let xx = twoSum(nums, target);
+const nums = [2, 7, 11, 15];
+const target = 9;
+const xx = twoSum(nums, target);
 console.log(xx);
-
-
 
 // const readline = require('node:readline');
 // const util = require('node:util');
